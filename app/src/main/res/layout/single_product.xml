@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="8dp"
+    android:elevation="1sp"
+    android:background="@drawable/item_back"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/productCard"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/demo" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="TextView"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/productCard"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik_light"
+        android:text="TextView"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/productCard"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="$56"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/productCard"
+        app:layout_constraintStart_toEndOf="@+id/productCard" />
+
+    <RatingBar
+        android:id="@+id/productRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:rating="4.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/productName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
